@@ -16,6 +16,9 @@
 		658B76772B7F718E000DF066 /* DistralTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76762B7F718E000DF066 /* DistralTests.swift */; };
 		658B76812B7F718E000DF066 /* DistralUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76802B7F718E000DF066 /* DistralUITests.swift */; };
 		658B76832B7F718E000DF066 /* DistralUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76822B7F718E000DF066 /* DistralUITestsLaunchTests.swift */; };
+		658B76912B7F80FC000DF066 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76902B7F80FC000DF066 /* TabsView.swift */; };
+		658B76942B7F81DA000DF066 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76932B7F81DA000DF066 /* HomeView.swift */; };
+		658B76972B7F820C000DF066 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76962B7F820C000DF066 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,9 @@
 		658B767C2B7F718E000DF066 /* DistralUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DistralUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		658B76802B7F718E000DF066 /* DistralUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistralUITests.swift; sourceTree = "<group>"; };
 		658B76822B7F718E000DF066 /* DistralUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistralUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		658B76902B7F80FC000DF066 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		658B76932B7F81DA000DF066 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		658B76962B7F820C000DF066 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 		658B765F2B7F718C000DF066 /* Distral */ = {
 			isa = PBXGroup;
 			children = (
+				658B768F2B7F80EF000DF066 /* Views */,
 				658B76602B7F718C000DF066 /* DistralApp.swift */,
 				658B76622B7F718C000DF066 /* ContentView.swift */,
 				658B76642B7F718E000DF066 /* Assets.xcassets */,
@@ -131,6 +138,32 @@
 				658B76822B7F718E000DF066 /* DistralUITestsLaunchTests.swift */,
 			);
 			path = DistralUITests;
+			sourceTree = "<group>";
+		};
+		658B768F2B7F80EF000DF066 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				658B76952B7F8200000DF066 /* ProfileView */,
+				658B76922B7F81CA000DF066 /* HomeView */,
+				658B76902B7F80FC000DF066 /* TabsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		658B76922B7F81CA000DF066 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				658B76932B7F81DA000DF066 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		658B76952B7F8200000DF066 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				658B76962B7F820C000DF066 /* ProfileView.swift */,
+			);
+			path = ProfileView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +299,10 @@
 				658B766A2B7F718E000DF066 /* Persistence.swift in Sources */,
 				658B76632B7F718C000DF066 /* ContentView.swift in Sources */,
 				658B76612B7F718C000DF066 /* DistralApp.swift in Sources */,
+				658B76942B7F81DA000DF066 /* HomeView.swift in Sources */,
 				658B766D2B7F718E000DF066 /* Distral.xcdatamodeld in Sources */,
+				658B76972B7F820C000DF066 /* ProfileView.swift in Sources */,
+				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
