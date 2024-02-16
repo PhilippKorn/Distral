@@ -19,6 +19,8 @@
 		658B76912B7F80FC000DF066 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76902B7F80FC000DF066 /* TabsView.swift */; };
 		658B76942B7F81DA000DF066 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76932B7F81DA000DF066 /* HomeView.swift */; };
 		658B76972B7F820C000DF066 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76962B7F820C000DF066 /* ProfileView.swift */; };
+		658B769B2B7F83DA000DF066 /* NavigationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B769A2B7F83DA000DF066 /* NavigationTile.swift */; };
+		658B769E2B7F8495000DF066 /* QuestionnaireNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		658B76902B7F80FC000DF066 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		658B76932B7F81DA000DF066 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		658B76962B7F820C000DF066 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		658B769A2B7F83DA000DF066 /* NavigationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTile.swift; sourceTree = "<group>"; };
+		658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireNavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 		658B768F2B7F80EF000DF066 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				658B769C2B7F847F000DF066 /* Questionnaires */,
+				658B76982B7F83BC000DF066 /* SupportViews */,
 				658B76952B7F8200000DF066 /* ProfileView */,
 				658B76922B7F81CA000DF066 /* HomeView */,
 				658B76902B7F80FC000DF066 /* TabsView.swift */,
@@ -164,6 +170,30 @@
 				658B76962B7F820C000DF066 /* ProfileView.swift */,
 			);
 			path = ProfileView;
+			sourceTree = "<group>";
+		};
+		658B76982B7F83BC000DF066 /* SupportViews */ = {
+			isa = PBXGroup;
+			children = (
+				658B76992B7F83C9000DF066 /* Navigation */,
+			);
+			path = SupportViews;
+			sourceTree = "<group>";
+		};
+		658B76992B7F83C9000DF066 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				658B769A2B7F83DA000DF066 /* NavigationTile.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		658B769C2B7F847F000DF066 /* Questionnaires */ = {
+			isa = PBXGroup;
+			children = (
+				658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */,
+			);
+			path = Questionnaires;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +331,8 @@
 				658B76612B7F718C000DF066 /* DistralApp.swift in Sources */,
 				658B76942B7F81DA000DF066 /* HomeView.swift in Sources */,
 				658B766D2B7F718E000DF066 /* Distral.xcdatamodeld in Sources */,
+				658B769B2B7F83DA000DF066 /* NavigationTile.swift in Sources */,
+				658B769E2B7F8495000DF066 /* QuestionnaireNavigationView.swift in Sources */,
 				658B76972B7F820C000DF066 /* ProfileView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
