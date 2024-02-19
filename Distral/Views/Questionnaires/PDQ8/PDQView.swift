@@ -66,6 +66,9 @@ struct PDQView: View {
                             )
                             .cornerRadius(12)
                         }
+                        .alert("Bitte Beantworten Sie die Frage bevor Sie fortfahren.", isPresented: $viewModel.showAlertForUnansweredQuestion) {
+            Button("Ok", role: .cancel) {}
+        }
                         .padding(10)
                     }
                     
@@ -90,11 +93,19 @@ struct PDQView: View {
                         .foregroundStyle(.gray)
                     }
                 }
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {abortQuestionnaire()}) {
+                        Text("Abbrechen")
+                        .foregroundStyle(.red)
+                        .padding()
+                    }
+                }
             }
         }
-        //        .overlay(
-        //            viewModel.showAlertForUnansweredQuestion ? CustomAlertView(showAlert: $viewModel.showAlertForUnansweredQuestion) : nil
-        //        )
+}
+    
+    func abortQuestionnaire(){
+        print("Questionnaire aborted")
     }
     
     func isOptionSelected(_ option: Int) -> Bool {
