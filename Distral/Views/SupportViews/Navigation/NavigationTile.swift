@@ -8,10 +8,9 @@
 import Foundation
 import SwiftUI
 
-struct NavigationTile<Destination: View>: View {
+struct NavigationTile: View {
     let imageSystemName: String
     let title: String
-    let destination: Destination
     var imageColor: Color = .white
     var textColor: Color = .white
     

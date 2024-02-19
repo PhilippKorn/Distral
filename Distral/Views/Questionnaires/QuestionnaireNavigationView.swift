@@ -9,6 +9,9 @@ import SwiftUI
 
 struct QuestionnaireNavigationView: View {
     @Environment(\.presentationMode) var presentationMode
+    @State private var showBewegungSheet = false
+    @State private var showLebensqualitaetSheet = false
+    @State private var showSymptomatikSheet = false
     var columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
     var body: some View {
         VStack(spacing: 20) {
@@ -19,9 +22,33 @@ struct QuestionnaireNavigationView: View {
             }
            
             LazyVGrid (columns: columns, spacing: 20) {
-                NavigationTile(imageSystemName: "list.bullet.clipboard", title: "Bewegung", destination: Text("Bewegung"))
-                NavigationTile(imageSystemName: "heart", title: "Lebensqualität", destination: Text("PDQ-8"))
-                NavigationTile(imageSystemName: "circle.hexagongrid", title: "Symptomatik", destination: Text("Quality"))
+               
+                Button(action: {
+                    showBewegungSheet = true
+                }) {
+                    NavigationTile(imageSystemName: "list.bullet.clipboard", title: "Bewegung")
+                }
+                .sheet(isPresented: $showBewegungSheet) {
+                    PDQView()
+                }
+                
+                Button(action: {
+                    showLebensqualitaetSheet = true
+                }) {
+                    NavigationTile(imageSystemName: "list.bullet.clipboard", title: "Lebensqualität")
+                }
+                .sheet(isPresented: $showBewegungSheet) {
+                    Text("Lebensqualität")
+                }
+                
+                Button(action: {
+                    showSymptomatikSheet = true
+                }) {
+                    NavigationTile(imageSystemName: "list.bullet.clipboard", title: "Symptomatik")
+                }
+                .sheet(isPresented: $showBewegungSheet) {
+                    Text("Symptomatik")
+                }
             }
             .padding()
         }

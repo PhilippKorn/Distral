@@ -36,7 +36,7 @@ struct PDQView: View {
            
             ScrollView {
                 Text(viewModel.titles[viewModel.questionCounter] ?? "")
-                    .font(.headline)
+                    .font(.title3)
                     .padding()
             }
             
@@ -50,7 +50,7 @@ struct PDQView: View {
                         Text(answerText(for: option))
                             .font(.system(size: 25))
                             .frame(width: 310, height: 60)
-                            .background(isOptionSelected(option) ? Color("Impala_steel") : Color("Impala_beige"))
+                            .background(isOptionSelected(option) ? .gray : .blue)
                             .foregroundStyle(isOptionSelected(option) ? .white : .black)
                             .cornerRadius(10)
                     }
