@@ -32,7 +32,6 @@ class PDQ8ViewModel: ObservableObject {
 
     
     let titles: [Int: String] = [
-        
         0: "Durch die Symptome meiner Parkinson-Erkrankung hatte ich im letzten Monat große Probleme, mich selbstständig anzuziehen.",
         1: "Im letzten Monat habe ich durch meine Parkinson-Erkrankung eine eingeschränkte Konzentration in alltäglichen Beschäftigungen wie Fernsehen, Rätseln oder Lesen bemerkt.",
         2: "Im letzten Monat habe ich aufgrund meiner Parkinson-Erkrankung viele konflikthafte Situationen mit Personen in meinem engen Umfeld gehabt.",
@@ -60,14 +59,11 @@ class PDQ8ViewModel: ObservableObject {
     func moveThroughQuestionsForward(){
         if questionCounter < titles.count - 1 {
             if let _ = selectedOptions[questionCounter] {
-                // Wenn eine Antwort ausgewählt wurde, zur nächsten Frage navigieren
                 questionCounter += 1
             } else {
-                // Wenn keine Antwort ausgewählt wurde, eine Warnung anzeigen
                 showAlertForUnansweredQuestion = true
             }
         } else if questionCounter >= titles.count - 1 {
-            // Wenn die letzte Frage erreicht wurde, den Fragebogen als abgeschlossen markieren
             isQuestionnaireCompleted = true
         }
     }
@@ -91,7 +87,6 @@ class PDQ8ViewModel: ObservableObject {
     }
     
     func calculateScore() -> Int {
-        // Berechnung der GesamtPunktzahl
         return 0
     }
 }
