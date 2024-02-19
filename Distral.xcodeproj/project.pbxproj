@@ -27,6 +27,7 @@
 		658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A82B8356A7000DF066 /* VideoPlayerView.swift */; };
 		658B76AC2B83585E000DF066 /* Sequenz04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */; };
 		658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */; };
+		658B76B62B838E84000DF066 /* PDQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76B52B838E84000DF066 /* PDQView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		658B76AA2B83574F000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sequenz04.mp4; path = "../../../panama-app/Panama/Sequenz04.mp4"; sourceTree = "<group>"; };
 		658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sequenz04.mp4; sourceTree = "<group>"; };
 		658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDQ8ViewModel.swift; sourceTree = "<group>"; };
+		658B76B52B838E84000DF066 /* PDQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDQView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 		658B769C2B7F847F000DF066 /* Questionnaires */ = {
 			isa = PBXGroup;
 			children = (
+				658B76B42B838E74000DF066 /* PDQ8 */,
 				658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */,
 			);
 			path = Questionnaires;
@@ -252,6 +255,14 @@
 			isa = PBXGroup;
 			children = (
 				658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */,
+			);
+			path = PDQ8;
+			sourceTree = "<group>";
+		};
+		658B76B42B838E74000DF066 /* PDQ8 */ = {
+			isa = PBXGroup;
+			children = (
+				658B76B52B838E84000DF066 /* PDQView.swift */,
 			);
 			path = PDQ8;
 			sourceTree = "<group>";
@@ -400,6 +411,7 @@
 				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
 				658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */,
 				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
+				658B76B62B838E84000DF066 /* PDQView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
