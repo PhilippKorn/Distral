@@ -37,11 +37,10 @@ struct TutorialDetailView: View {
             player?.pause()
             player = nil
         }
-        .onChange(of: videoName) { newVideoName in
-            if !newVideoName.isEmpty, let path = Bundle.main.path(forResource: newVideoName, ofType: "mp4") {
+        .onChange(of: videoName) {oldValue, newValue in
+            if !newValue.isEmpty, let path = Bundle.main.path(forResource: newValue, ofType: "mp4") {
                 let url = URL(fileURLWithPath: path)
                 player = AVPlayer(url: url)
-                player?.play()
             } else {
                 player?.pause()
                 player = nil
