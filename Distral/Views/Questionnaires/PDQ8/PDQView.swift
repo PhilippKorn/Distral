@@ -15,7 +15,6 @@ struct PDQView: View {
    
     var body: some View {
         if !viewModel.isQuestionnaireCompleted {
-            // vew while Questions are shown
                 questionView
         }
     }
@@ -45,19 +44,42 @@ struct PDQView: View {
                 ForEach(0..<5, id: \.self) { option in
                     Button(action: {
                         viewModel.selectOption(option)
-                        viewModel.moveThroughQuestionsForward()
                     }) {
-                        Text(answerText(for: option))
-                            .font(.system(size: 25))
-                            .frame(width: 310, height: 60)
-                            .background(isOptionSelected(option) ? .gray : .blue)
-                            .foregroundStyle(isOptionSelected(option) ? .white : .black)
-                            .cornerRadius(10)
+                        HStack {
+                            Text(answerText(for: option))
+                                .frame(maxWidth: .infinity)
+                            Spacer()
+                            if isOptionSelected(option) {
+                                Image(systemName:"checkmark.circle.fill")
+                                    .foregroundStyle(.blue)
+                            }
+                        }
+                        .padding()
+                        .background(Color.white)
+                        .foregroundStyle(Color.black)
+                        .overlay (
+                            RoundedRectangle(cornerRadius: 12)
+                                .stroke(isOptionSelected(option) ? Color.blue : Color.white, lineWidth: 3)
+                        )
+                        .cornerRadius(12)
                     }
                     .padding(10)
                 }
+                
+                Button(action: {
+                    viewModel.moveThroughQuestionsForward()
+                }) {
+                    Text("Weiter")
+                        .frame(maxWidth: .infinity)
+                }
+                .padding()
+                .background(.blue)
+                .clipShape(RoundedRectangle(cornerRadius: 12))
+                .foregroundStyle(.white)
+                .padding()
             }
         }
+        .background(.gray.opacity(0.14))
 //        .overlay(
 //            viewModel.showAlertForUnansweredQuestion ? CustomAlertView(showAlert: $viewModel.showAlertForUnansweredQuestion) : nil
 //        )
