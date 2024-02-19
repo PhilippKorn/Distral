@@ -20,7 +20,7 @@ class PDQ8ViewModel: ObservableObject {
     
     @Published var pdnmsSliderValues: [Double] = Array(repeating: 0, count: 30)
     
-    @Published var currentQuestionIndex: Int = 0  // New state variable
+    @Published var currentQuestionIndex: Int = 0
     
     @Published var selectedOptions: [Int?] = Array(repeating: nil, count: 8)
     
@@ -53,10 +53,8 @@ class PDQ8ViewModel: ObservableObject {
         }
     }
     
-    
     func selectOption(_ option: Int) {
         selectedOptions[questionCounter] = option
-        print(selectedOptions)
     }
     
     func moveThroughQuestionsForward(){
