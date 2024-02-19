@@ -26,6 +26,7 @@
 		658B76A72B835252000DF066 /* TestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A62B835252000DF066 /* TestNavigation.swift */; };
 		658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A82B8356A7000DF066 /* VideoPlayerView.swift */; };
 		658B76AC2B83585E000DF066 /* Sequenz04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */; };
+		658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		658B76A82B8356A7000DF066 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		658B76AA2B83574F000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sequenz04.mp4; path = "../../../panama-app/Panama/Sequenz04.mp4"; sourceTree = "<group>"; };
 		658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sequenz04.mp4; sourceTree = "<group>"; };
+		658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDQ8ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		658B765F2B7F718C000DF066 /* Distral */ = {
 			isa = PBXGroup;
 			children = (
+				658B76B02B838982000DF066 /* ViewModels */,
 				658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */,
 				658B76A42B835229000DF066 /* DataStructures */,
 				658B768F2B7F80EF000DF066 /* Views */,
@@ -235,6 +238,22 @@
 				658B76A62B835252000DF066 /* TestNavigation.swift */,
 			);
 			path = enums;
+			sourceTree = "<group>";
+		};
+		658B76B02B838982000DF066 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				658B76B12B83898A000DF066 /* PDQ8 */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		658B76B12B83898A000DF066 /* PDQ8 */ = {
+			isa = PBXGroup;
+			children = (
+				658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */,
+			);
+			path = PDQ8;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +398,7 @@
 				658B76972B7F820C000DF066 /* ProfileView.swift in Sources */,
 				658B76A02B834EED000DF066 /* TutorialCellView.swift in Sources */,
 				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
+				658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */,
 				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);

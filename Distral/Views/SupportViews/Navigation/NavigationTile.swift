@@ -16,23 +16,20 @@ struct NavigationTile<Destination: View>: View {
     var textColor: Color = .white
     
     var body: some View {
-        NavigationLink(destination: destination) {
-            VStack {
-                Image(systemName: imageSystemName)
-                    .font(.largeTitle)
-                    .foregroundColor(imageColor)
-                Text(title)
-                    .font(.footnote)
-                    .foregroundColor(textColor)
-                    .padding(.vertical)
-                    .bold()
-            }
-            .padding()
-            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-            .background(.blue)
-            .cornerRadius(15)
-            .aspectRatio(1, contentMode: .fit)
+        VStack {
+            Image(systemName: imageSystemName)
+                .font(.largeTitle)
+                .foregroundColor(imageColor)
+            Text(title)
+                .font(.footnote)
+                .foregroundColor(textColor)
+                .padding(.vertical)
+                .bold()
         }
         .padding()
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(.blue)
+        .cornerRadius(15)
+        .aspectRatio(1, contentMode: .fit)
     }
 }

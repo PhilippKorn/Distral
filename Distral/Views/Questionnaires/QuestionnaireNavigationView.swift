@@ -17,7 +17,7 @@ struct QuestionnaireNavigationView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
             }
-            
+           
             LazyVGrid (columns: columns, spacing: 20) {
                 NavigationTile(imageSystemName: "list.bullet.clipboard", title: "Bewegung", destination: Text("Bewegung"))
                 NavigationTile(imageSystemName: "heart", title: "Lebensqualität", destination: Text("PDQ-8"))
