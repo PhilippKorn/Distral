@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State private var auswahl = "Fragebögen"
+    @State private var selectedTest: TestNavigation = .questionnaires
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             Text("Hallo")
@@ -18,20 +18,20 @@ struct HomeView: View {
                 .font(.title)
                 .padding()
             
-            Picker("Optionen", selection: $auswahl) {
-                Text("Fragebögen").tag("Fragebögen")
-                Text("Stroop").tag("Stroop")
-                Text("Motorik").tag("Motorik")
+            Picker("Test Optionen", selection: $selectedTest){
+                ForEach(TestNavigation.allCases) {test in
+                    Text(test.displayName).tag(test)
+                }
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
             
             ScrollView {
-                if auswahl == "Fragebögen" {
+                if selectedTest.tutorial.title == "Fragebögen" {
                     QuestionnaireNavigationView()
-                } else if auswahl == "Stroop" {
+                } else if selectedTest.tutorial.title == "Stroop" {
                     Text("Stroop View")
-                } else if auswahl == "Motorik" {
+                } else if selectedTest.tutorial.title == "Motorik" {
                     Text("Motorik View")
                 }
                 
@@ -39,35 +39,10 @@ struct HomeView: View {
                     .font(.headline)
                     .padding()
                 
-                HStack {
-                    // Profilbild
-                    Image("Impi2PDF")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50, height: 50)
-                        .clipShape(Circle())
-                        .padding()
-                    
-                    VStack {
-                        Text("Navigation Title")
-                            .font(.headline)
-                        Text("Navigation Text")
-                            .font(.subheadline)
-                    }
-                    
-                    Image(systemName: "play.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                        .clipShape(Circle())
-                        .padding()
-                }
-                .background(Color.gray.opacity(0.5))
-                .cornerRadius(10)
-                .frame(maxWidth: .infinity)
+                TutorialCellView(title: selectedTest.tutorial.title, text: selectedTest.tutorial.text, videoName: selectedTest.tutorial.videoName)
+                
             }
             .padding()
-            
         }
     }
 }

@@ -21,6 +21,11 @@
 		658B76972B7F820C000DF066 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76962B7F820C000DF066 /* ProfileView.swift */; };
 		658B769B2B7F83DA000DF066 /* NavigationTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B769A2B7F83DA000DF066 /* NavigationTile.swift */; };
 		658B769E2B7F8495000DF066 /* QuestionnaireNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */; };
+		658B76A02B834EED000DF066 /* TutorialCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B769F2B834EED000DF066 /* TutorialCellView.swift */; };
+		658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A22B835145000DF066 /* TutorialDetailView.swift */; };
+		658B76A72B835252000DF066 /* TestNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A62B835252000DF066 /* TestNavigation.swift */; };
+		658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76A82B8356A7000DF066 /* VideoPlayerView.swift */; };
+		658B76AC2B83585E000DF066 /* Sequenz04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +63,12 @@
 		658B76962B7F820C000DF066 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		658B769A2B7F83DA000DF066 /* NavigationTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTile.swift; sourceTree = "<group>"; };
 		658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionnaireNavigationView.swift; sourceTree = "<group>"; };
+		658B769F2B834EED000DF066 /* TutorialCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialCellView.swift; sourceTree = "<group>"; };
+		658B76A22B835145000DF066 /* TutorialDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialDetailView.swift; sourceTree = "<group>"; };
+		658B76A62B835252000DF066 /* TestNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNavigation.swift; sourceTree = "<group>"; };
+		658B76A82B8356A7000DF066 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		658B76AA2B83574F000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = Sequenz04.mp4; path = "../../../panama-app/Panama/Sequenz04.mp4"; sourceTree = "<group>"; };
+		658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sequenz04.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,7 @@
 		658B76542B7F718C000DF066 = {
 			isa = PBXGroup;
 			children = (
+				658B76AA2B83574F000DF066 /* Sequenz04.mp4 */,
 				658B765F2B7F718C000DF066 /* Distral */,
 				658B76752B7F718E000DF066 /* DistralTests */,
 				658B767F2B7F718E000DF066 /* DistralUITests */,
@@ -108,6 +120,8 @@
 		658B765F2B7F718C000DF066 /* Distral */ = {
 			isa = PBXGroup;
 			children = (
+				658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */,
+				658B76A42B835229000DF066 /* DataStructures */,
 				658B768F2B7F80EF000DF066 /* Views */,
 				658B76602B7F718C000DF066 /* DistralApp.swift */,
 				658B76622B7F718C000DF066 /* ContentView.swift */,
@@ -175,6 +189,7 @@
 		658B76982B7F83BC000DF066 /* SupportViews */ = {
 			isa = PBXGroup;
 			children = (
+				658B76A12B835120000DF066 /* TutorialSupportViews */,
 				658B76992B7F83C9000DF066 /* Navigation */,
 			);
 			path = SupportViews;
@@ -194,6 +209,32 @@
 				658B769D2B7F8494000DF066 /* QuestionnaireNavigationView.swift */,
 			);
 			path = Questionnaires;
+			sourceTree = "<group>";
+		};
+		658B76A12B835120000DF066 /* TutorialSupportViews */ = {
+			isa = PBXGroup;
+			children = (
+				658B769F2B834EED000DF066 /* TutorialCellView.swift */,
+				658B76A22B835145000DF066 /* TutorialDetailView.swift */,
+				658B76A82B8356A7000DF066 /* VideoPlayerView.swift */,
+			);
+			path = TutorialSupportViews;
+			sourceTree = "<group>";
+		};
+		658B76A42B835229000DF066 /* DataStructures */ = {
+			isa = PBXGroup;
+			children = (
+				658B76A52B835232000DF066 /* enums */,
+			);
+			path = DataStructures;
+			sourceTree = "<group>";
+		};
+		658B76A52B835232000DF066 /* enums */ = {
+			isa = PBXGroup;
+			children = (
+				658B76A62B835252000DF066 /* TestNavigation.swift */,
+			);
+			path = enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658B76AC2B83585E000DF066 /* Sequenz04.mp4 in Resources */,
 				658B76682B7F718E000DF066 /* Preview Assets.xcassets in Resources */,
 				658B76652B7F718E000DF066 /* Assets.xcassets in Resources */,
 			);
@@ -333,7 +375,11 @@
 				658B766D2B7F718E000DF066 /* Distral.xcdatamodeld in Sources */,
 				658B769B2B7F83DA000DF066 /* NavigationTile.swift in Sources */,
 				658B769E2B7F8495000DF066 /* QuestionnaireNavigationView.swift in Sources */,
+				658B76A72B835252000DF066 /* TestNavigation.swift in Sources */,
 				658B76972B7F820C000DF066 /* ProfileView.swift in Sources */,
+				658B76A02B834EED000DF066 /* TutorialCellView.swift in Sources */,
+				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
+				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
