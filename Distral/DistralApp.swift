@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct DistralApp: App {
@@ -13,7 +14,7 @@ struct DistralApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabsView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

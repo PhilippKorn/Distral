@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6548A6482B83C114006A68DA /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548A6472B83C114006A68DA /* DatabaseService.swift */; };
 		658B76612B7F718C000DF066 /* DistralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76602B7F718C000DF066 /* DistralApp.swift */; };
 		658B76632B7F718C000DF066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76622B7F718C000DF066 /* ContentView.swift */; };
 		658B76652B7F718E000DF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658B76642B7F718E000DF066 /* Assets.xcassets */; };
@@ -48,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6548A6472B83C114006A68DA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		6548A64F2B83C2FB006A68DA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Distral/DB/User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6548A6502B83C2FB006A68DA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Distral/DB/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		658B765D2B7F718C000DF066 /* Distral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Distral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658B76602B7F718C000DF066 /* DistralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistralApp.swift; sourceTree = "<group>"; };
 		658B76622B7F718C000DF066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,9 +104,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6548A6452B83C0FC006A68DA /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				6548A6462B83C103006A68DA /* Services */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
+		6548A6462B83C103006A68DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6548A6472B83C114006A68DA /* DatabaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		658B76542B7F718C000DF066 = {
 			isa = PBXGroup;
 			children = (
+				6548A64F2B83C2FB006A68DA /* User+CoreDataClass.swift */,
+				6548A6502B83C2FB006A68DA /* User+CoreDataProperties.swift */,
 				658B76AA2B83574F000DF066 /* Sequenz04.mp4 */,
 				658B765F2B7F718C000DF066 /* Distral */,
 				658B76752B7F718E000DF066 /* DistralTests */,
@@ -124,6 +146,7 @@
 		658B765F2B7F718C000DF066 /* Distral */ = {
 			isa = PBXGroup;
 			children = (
+				6548A6452B83C0FC006A68DA /* DB */,
 				658B76B02B838982000DF066 /* ViewModels */,
 				658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */,
 				658B76A42B835229000DF066 /* DataStructures */,
@@ -404,6 +427,7 @@
 				658B76942B7F81DA000DF066 /* HomeView.swift in Sources */,
 				658B766D2B7F718E000DF066 /* Distral.xcdatamodeld in Sources */,
 				658B769B2B7F83DA000DF066 /* NavigationTile.swift in Sources */,
+				6548A6482B83C114006A68DA /* DatabaseService.swift in Sources */,
 				658B769E2B7F8495000DF066 /* QuestionnaireNavigationView.swift in Sources */,
 				658B76A72B835252000DF066 /* TestNavigation.swift in Sources */,
 				658B76972B7F820C000DF066 /* ProfileView.swift in Sources */,

@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TabsView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    
     var body: some View {
         
         TabView {
@@ -16,7 +19,7 @@ struct TabsView: View {
                     Label("Home", systemImage: "house")
                 }
            
-            ProfileView()
+            ProfileView(databaseService: DatabaseService(context: managedObjectContext))
                 .tabItem {
                     Label("Profil", systemImage: "person.circle")
                 }
