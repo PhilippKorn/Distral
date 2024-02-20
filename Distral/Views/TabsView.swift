@@ -10,6 +10,7 @@ import CoreData
 
 struct TabsView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
+    @State var selectedTab: Tab
     
     var body: some View {
         
@@ -18,15 +19,17 @@ struct TabsView: View {
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+                .tag(Tab.home)
            
             ProfileView(databaseService: DatabaseService(context: managedObjectContext))
                 .tabItem {
                     Label("Profil", systemImage: "person.circle")
                 }
+                .tag(Tab.profile)
         }
     }
 }
 
 #Preview {
-    TabsView()
+    TabsView(selectedTab: .home)
 }

@@ -14,7 +14,7 @@ struct DistralApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TabsView()
+            ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

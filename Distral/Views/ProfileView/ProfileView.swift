@@ -22,7 +22,13 @@ struct ProfileView: View {
                     .padding()
                 
                 Button("Benutzer hinzufügen") {
-                    databaseService.addUser(id_gkv: id_gkv)
+                    databaseService.addUser(id_gkv: id_gkv) { success in
+                        if success {
+                            print("Userangelegt")
+                        } else {
+                            print("LoginView: Anlegen des users hat nicht funktioniert")
+                        }
+                    }
                     users = databaseService.fetchUsers()
                 }
                 .padding()
@@ -34,11 +40,23 @@ struct ProfileView: View {
                 .onDelete(perform: deleteUser)
             }
         }
+        .onAppear {
+            users = databaseService.fetchUsers()
+        }
     }
-    
+}
+
+extension ProfileView {
     private func deleteUser(at offsets: IndexSet) {
         for index in offsets {
             let user = users[index]
+            // Überprüfe, ob der zu löschende User der aktuell eingeloggte User ist
+            if let currentUserId = UserDefaults.standard.string(forKey: "userIdentification"),
+               currentUserId == user.id_gkv {
+                // Setze den Login-Status zurück
+                UserDefaults.standard.set(false, forKey: "isUserLoggedIn")
+                UserDefaults.standard.removeObject(forKey: "userIdentification")
+            }
             databaseService.deleteUser(withIDGKV: user.id_gkv!)
         }
         users = databaseService.fetchUsers()

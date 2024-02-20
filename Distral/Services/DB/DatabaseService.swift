@@ -16,12 +16,21 @@ class DatabaseService {
     }
 }
 
+// MARK: - User DB Operations
+
 extension DatabaseService {
-    // User DB Operations
-    func addUser(id_gkv: String){
+    func addUser(id_gkv: String, completion: @escaping (Bool) -> Void) {
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
         user.id_gkv = id_gkv
-        saveContext()
+
+        do {
+            try managedObjectContext.save()
+            print("User erfolgreich gespeichert.")
+            completion(true)
+        } catch {
+            print("Fehler beim Speichern des Users: \(error)")
+            completion(false)
+        }
     }
    
     func fetchUsers() -> [User] {
@@ -59,4 +68,17 @@ extension DatabaseService {
         }
     }
     
+    func userExits(with idGKV: String) -> Bool {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id_gkv == %@", idGKV)
+        
+        do {
+            let result = try managedObjectContext.fetch(fetchRequest)
+            print("DBService: User gefunden: \(result)")
+            return !result.isEmpty
+        } catch {
+            print("Fehler beim Überprüfen des Users \(error)")
+            return false
+        }
+    }
 }
