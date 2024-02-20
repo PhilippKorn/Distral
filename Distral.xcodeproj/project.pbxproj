@@ -11,6 +11,8 @@
 		656FB8BE2B849C7200D2CF6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8BD2B849C7200D2CF6A /* Sex.swift */; };
 		656FB8C02B849C8100D2CF6A /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8BF2B849C8100D2CF6A /* Hand.swift */; };
 		656FB8C22B849C9F00D2CF6A /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8C12B849C9F00D2CF6A /* Education.swift */; };
+		656FB8C52B849E3D00D2CF6A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8C42B849E3D00D2CF6A /* LoginView.swift */; };
+		656FB8CA2B849FA000D2CF6A /* GKVScannerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8C92B849FA000D2CF6A /* GKVScannerService.swift */; };
 		658B76612B7F718C000DF066 /* DistralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76602B7F718C000DF066 /* DistralApp.swift */; };
 		658B76632B7F718C000DF066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76622B7F718C000DF066 /* ContentView.swift */; };
 		658B76652B7F718E000DF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658B76642B7F718E000DF066 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		656FB8BD2B849C7200D2CF6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		656FB8BF2B849C8100D2CF6A /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		656FB8C12B849C9F00D2CF6A /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
+		656FB8C42B849E3D00D2CF6A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		656FB8C92B849FA000D2CF6A /* GKVScannerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKVScannerService.swift; sourceTree = "<group>"; };
 		658B765D2B7F718C000DF066 /* Distral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Distral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658B76602B7F718C000DF066 /* DistralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistralApp.swift; sourceTree = "<group>"; };
 		658B76622B7F718C000DF066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -113,17 +117,41 @@
 		6548A6452B83C0FC006A68DA /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				6548A6462B83C103006A68DA /* Services */,
 			);
 			path = DB;
 			sourceTree = "<group>";
 		};
-		6548A6462B83C103006A68DA /* Services */ = {
+		656FB8C32B849E2D00D2CF6A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				656FB8C42B849E3D00D2CF6A /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		656FB8C62B849F6F00D2CF6A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				656FB8C82B849F8000D2CF6A /* Scanning */,
+				656FB8C72B849F7B00D2CF6A /* DB */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		656FB8C72B849F7B00D2CF6A /* DB */ = {
 			isa = PBXGroup;
 			children = (
 				6548A6472B83C114006A68DA /* DatabaseService.swift */,
 			);
-			path = Services;
+			path = DB;
+			sourceTree = "<group>";
+		};
+		656FB8C82B849F8000D2CF6A /* Scanning */ = {
+			isa = PBXGroup;
+			children = (
+				656FB8C92B849FA000D2CF6A /* GKVScannerService.swift */,
+			);
+			path = Scanning;
 			sourceTree = "<group>";
 		};
 		658B76542B7F718C000DF066 = {
@@ -152,6 +180,7 @@
 		658B765F2B7F718C000DF066 /* Distral */ = {
 			isa = PBXGroup;
 			children = (
+				656FB8C62B849F6F00D2CF6A /* Services */,
 				6548A6452B83C0FC006A68DA /* DB */,
 				658B76B02B838982000DF066 /* ViewModels */,
 				658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */,
@@ -195,6 +224,7 @@
 		658B768F2B7F80EF000DF066 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				656FB8C32B849E2D00D2CF6A /* Login */,
 				658B769C2B7F847F000DF066 /* Questionnaires */,
 				658B76982B7F83BC000DF066 /* SupportViews */,
 				658B76952B7F8200000DF066 /* ProfileView */,
@@ -444,10 +474,12 @@
 				658B76A02B834EED000DF066 /* TutorialCellView.swift in Sources */,
 				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
 				658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */,
+				656FB8CA2B849FA000D2CF6A /* GKVScannerService.swift in Sources */,
 				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
 				656FB8C02B849C8100D2CF6A /* Hand.swift in Sources */,
 				656FB8BE2B849C7200D2CF6A /* Sex.swift in Sources */,
 				658B76B62B838E84000DF066 /* PDQView.swift in Sources */,
+				656FB8C52B849E3D00D2CF6A /* LoginView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
