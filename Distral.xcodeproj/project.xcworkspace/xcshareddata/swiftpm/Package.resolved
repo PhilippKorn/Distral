@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "fhirmodels?tab=readme-ov-file",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/FHIRModels?tab=readme-ov-file",
+      "state" : {
+        "revision" : "861afd5816a98d38f86220eab2f812d76cad84a0",
+        "version" : "0.5.0"
+      }
+    }
+  ],
+  "version" : 2
+}

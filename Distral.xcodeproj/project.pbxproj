@@ -36,6 +36,12 @@
 		658B76AC2B83585E000DF066 /* Sequenz04.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */; };
 		658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */; };
 		658B76B62B838E84000DF066 /* PDQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76B52B838E84000DF066 /* PDQView.swift */; };
+		659FB0622B84FC1200325900 /* ModelsBuild in Frameworks */ = {isa = PBXBuildFile; productRef = 659FB0612B84FC1200325900 /* ModelsBuild */; };
+		659FB0642B84FC1200325900 /* ModelsDSTU2 in Frameworks */ = {isa = PBXBuildFile; productRef = 659FB0632B84FC1200325900 /* ModelsDSTU2 */; };
+		659FB0662B84FC1200325900 /* ModelsR4 in Frameworks */ = {isa = PBXBuildFile; productRef = 659FB0652B84FC1200325900 /* ModelsR4 */; };
+		659FB0682B84FC1200325900 /* ModelsR4B in Frameworks */ = {isa = PBXBuildFile; productRef = 659FB0672B84FC1200325900 /* ModelsR4B */; };
+		659FB06A2B84FC1200325900 /* ModelsR5 in Frameworks */ = {isa = PBXBuildFile; productRef = 659FB0692B84FC1200325900 /* ModelsR5 */; };
+		659FB0722B85019300325900 /* FHIRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659FB0712B85019300325900 /* FHIRService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +63,6 @@
 
 /* Begin PBXFileReference section */
 		6548A6472B83C114006A68DA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
-		6548A64F2B83C2FB006A68DA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Distral/DB/User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		6548A6502B83C2FB006A68DA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Distral/DB/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		656FB8BD2B849C7200D2CF6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		656FB8BF2B849C8100D2CF6A /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
 		656FB8C12B849C9F00D2CF6A /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 		658B76AB2B8357C0000DF066 /* Sequenz04.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sequenz04.mp4; sourceTree = "<group>"; };
 		658B76B22B83899F000DF066 /* PDQ8ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDQ8ViewModel.swift; sourceTree = "<group>"; };
 		658B76B52B838E84000DF066 /* PDQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDQView.swift; sourceTree = "<group>"; };
+		659FB06F2B8500A300325900 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Distral/DB/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		659FB0712B85019300325900 /* FHIRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FHIRService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659FB0622B84FC1200325900 /* ModelsBuild in Frameworks */,
+				659FB06A2B84FC1200325900 /* ModelsR5 in Frameworks */,
+				659FB0682B84FC1200325900 /* ModelsR4B in Frameworks */,
+				659FB0662B84FC1200325900 /* ModelsR4 in Frameworks */,
+				659FB0642B84FC1200325900 /* ModelsDSTU2 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +147,7 @@
 		656FB8C62B849F6F00D2CF6A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				659FB0702B85017E00325900 /* FHIR */,
 				656FB8C82B849F8000D2CF6A /* Scanning */,
 				656FB8C72B849F7B00D2CF6A /* DB */,
 			);
@@ -161,13 +173,13 @@
 		658B76542B7F718C000DF066 = {
 			isa = PBXGroup;
 			children = (
-				6548A64F2B83C2FB006A68DA /* User+CoreDataClass.swift */,
-				6548A6502B83C2FB006A68DA /* User+CoreDataProperties.swift */,
+				659FB06F2B8500A300325900 /* User+CoreDataProperties.swift */,
 				658B76AA2B83574F000DF066 /* Sequenz04.mp4 */,
 				658B765F2B7F718C000DF066 /* Distral */,
 				658B76752B7F718E000DF066 /* DistralTests */,
 				658B767F2B7F718E000DF066 /* DistralUITests */,
 				658B765E2B7F718C000DF066 /* Products */,
+				659FB0522B84FB9700325900 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -335,6 +347,21 @@
 			path = PDQ8;
 			sourceTree = "<group>";
 		};
+		659FB0522B84FB9700325900 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		659FB0702B85017E00325900 /* FHIR */ = {
+			isa = PBXGroup;
+			children = (
+				659FB0712B85019300325900 /* FHIRService.swift */,
+			);
+			path = FHIR;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -351,6 +378,13 @@
 			dependencies = (
 			);
 			name = Distral;
+			packageProductDependencies = (
+				659FB0612B84FC1200325900 /* ModelsBuild */,
+				659FB0632B84FC1200325900 /* ModelsDSTU2 */,
+				659FB0652B84FC1200325900 /* ModelsR4 */,
+				659FB0672B84FC1200325900 /* ModelsR4B */,
+				659FB0692B84FC1200325900 /* ModelsR5 */,
+			);
 			productName = Distral;
 			productReference = 658B765D2B7F718C000DF066 /* Distral.app */;
 			productType = "com.apple.product-type.application";
@@ -423,6 +457,9 @@
 				Base,
 			);
 			mainGroup = 658B76542B7F718C000DF066;
+			packageReferences = (
+				659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */,
+			);
 			productRefGroup = 658B765E2B7F718C000DF066 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -480,6 +517,7 @@
 				658B76A02B834EED000DF066 /* TutorialCellView.swift in Sources */,
 				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
 				658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */,
+				659FB0722B85019300325900 /* FHIRService.swift in Sources */,
 				656FB8CA2B849FA000D2CF6A /* GKVScannerService.swift in Sources */,
 				656FB8CC2B84ADD600D2CF6A /* Tabs.swift in Sources */,
 				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
@@ -818,6 +856,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/FHIRModels?tab=readme-ov-file";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		659FB0612B84FC1200325900 /* ModelsBuild */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsBuild;
+		};
+		659FB0632B84FC1200325900 /* ModelsDSTU2 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsDSTU2;
+		};
+		659FB0652B84FC1200325900 /* ModelsR4 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsR4;
+		};
+		659FB0672B84FC1200325900 /* ModelsR4B */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsR4B;
+		};
+		659FB0692B84FC1200325900 /* ModelsR5 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 659FB0602B84FC1200325900 /* XCRemoteSwiftPackageReference "FHIRModels" */;
+			productName = ModelsR5;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		658B766B2B7F718E000DF066 /* Distral.xcdatamodeld */ = {

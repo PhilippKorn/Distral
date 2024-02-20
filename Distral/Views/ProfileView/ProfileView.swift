@@ -14,6 +14,7 @@ struct ProfileView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     var databaseService: DatabaseService
     @Binding var isUserLoggedIn: Bool
+    @State private var currentUser: User?
     
     var body: some View {
         NavigationStack {
@@ -55,6 +56,7 @@ struct ProfileView: View {
         }
         .onAppear {
             users = databaseService.fetchUsers()
+            showFHIRPatient()
         }
     }
 }
@@ -79,6 +81,21 @@ extension ProfileView {
         UserDefaults.standard.removeObject(forKey: "isUserLoggedIn")
         UserDefaults.standard.removeObject(forKey: "userIdentification")
         isUserLoggedIn = false
+    }
+    
+    private func showFHIRPatient() {
+        if let id_gkv = UserDefaults.standard.string(forKey: "userIdentification"),
+           let user = databaseService.fetchUser(withIDGKV: id_gkv) {
+            let fhirPatient = FHIRService.convertToPatient(user: user)
+            print(fhirPatient)
+            do {
+                let jsonData = try JSONEncoder().encode(fhirPatient)
+                let jsonString = String(data: jsonData, encoding: .utf8)
+                print(jsonString ?? "Ungültige Daten")
+            } catch {
+                print("Fehler bei der Konvertierung: \(error)")
+            }
+        }
     }
 }
 

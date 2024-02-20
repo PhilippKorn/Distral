@@ -2,12 +2,13 @@
 //  User+CoreDataProperties.swift
 //  Distral
 //
-//  Created by Philipp Korn on 20.02.24.
+//  Created by Philipp Korn on 19.02.24.
 //
 //
 
 import Foundation
 import CoreData
+import ModelsR4
 
 
 extension User {
@@ -21,11 +22,16 @@ extension User {
 
 }
 
+extension User : Identifiable {
+
+}
+
 extension User {
     public func toFHIRPatient() -> Patient {
-         var patient = Patient()
-         let identifier = Identifier(use: .official, value: FHIRPrimitive(FHIRString(self.id_gkv ?? "")))
-         patient.identifier = [identifier]
-         return patient
-     }
+        var patient = Patient()
+        let identifier = Identifier(use: .official, value: FHIRPrimitive(FHIRString(self.id_gkv ?? "")))
+        patient.identifier = [identifier]
+        print(patient)
+        return patient
+    }
 }
