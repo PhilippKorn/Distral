@@ -15,7 +15,7 @@ struct ContentView: View {
     
     var body: some View {
         if isUserLoggedIn {
-            TabsView(selectedTab: .home)
+            TabsView(selectedTab: .home, isUserLoggedIn: $isUserLoggedIn)
         } else {
             LoginView(databaseService: DatabaseService(context: managedObjectContext), showTabsView: $showTabsView, isUserLoggedIn: $isUserLoggedIn)
         }

@@ -118,7 +118,7 @@ struct LoginView: View {
             .navigationDestination(for: NavigationTarget.self) {target in
                 switch target {
                 case .profile:
-                    TabsView(selectedTab: .profile)
+                    TabsView(selectedTab: .profile, isUserLoggedIn: $isUserLoggedIn)
                 }
             }
             
@@ -163,7 +163,7 @@ extension LoginView {
                     UserDefaults.standard.set(id_gkv, forKey: "userIdentification")
                     isUserLoggedIn = true
                 } else {
-                    // Fehlerbehandlung
+                    print("Fehler beim Login des Users.")
                 }
             }
         }

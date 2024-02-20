@@ -13,31 +13,44 @@ struct ProfileView: View {
     @State private var users: [User] = []
     @Environment(\.managedObjectContext) var managedObjectContext
     var databaseService: DatabaseService
+    @Binding var isUserLoggedIn: Bool
     
     var body: some View {
-        VStack {
-            Form {
-                TextField("ID GKV", text: $id_gkv)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-                Button("Benutzer hinzufügen") {
-                    databaseService.addUser(id_gkv: id_gkv) { success in
-                        if success {
-                            print("Userangelegt")
-                        } else {
-                            print("LoginView: Anlegen des users hat nicht funktioniert")
+        NavigationStack {
+            VStack {
+                Form {
+                    TextField("ID GKV", text: $id_gkv)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding()
+                    
+                    Button("Benutzer hinzufügen") {
+                        databaseService.addUser(id_gkv: id_gkv) { success in
+                            if success {
+                                print("Userangelegt")
+                            } else {
+                                print("LoginView: Anlegen des users hat nicht funktioniert")
+                            }
                         }
+                        users = databaseService.fetchUsers()
                     }
-                    users = databaseService.fetchUsers()
+                    .padding()
                 }
-                .padding()
+                List {
+                    ForEach(users, id: \.self) {user in
+                        Text(user.id_gkv ?? "Unbekannt")
+                    }
+                    .onDelete(perform: deleteUser)
+                }
             }
-            List {
-                ForEach(users, id: \.self) {user in
-                    Text(user.id_gkv ?? "Unbekannt")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {logout()}) {
+                        Text("Ausloggen")
+                            .foregroundStyle(.black)
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                            .foregroundStyle(.black)
+                    }
                 }
-                .onDelete(perform: deleteUser)
             }
         }
         .onAppear {
@@ -60,6 +73,12 @@ extension ProfileView {
             databaseService.deleteUser(withIDGKV: user.id_gkv!)
         }
         users = databaseService.fetchUsers()
+    }
+    
+    private func logout(){
+        UserDefaults.standard.removeObject(forKey: "isUserLoggedIn")
+        UserDefaults.standard.removeObject(forKey: "userIdentification")
+        isUserLoggedIn = false
     }
 }
 
