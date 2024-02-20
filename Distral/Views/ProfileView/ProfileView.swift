@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State private var isGKVScanned = false
     @State private var id_gkv: String = ""
     @State private var users: [User] = []
     @Environment(\.managedObjectContext) var managedObjectContext

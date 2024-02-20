@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6548A6482B83C114006A68DA /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6548A6472B83C114006A68DA /* DatabaseService.swift */; };
+		656FB8BE2B849C7200D2CF6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8BD2B849C7200D2CF6A /* Sex.swift */; };
+		656FB8C02B849C8100D2CF6A /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8BF2B849C8100D2CF6A /* Hand.swift */; };
+		656FB8C22B849C9F00D2CF6A /* Education.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656FB8C12B849C9F00D2CF6A /* Education.swift */; };
 		658B76612B7F718C000DF066 /* DistralApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76602B7F718C000DF066 /* DistralApp.swift */; };
 		658B76632B7F718C000DF066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B76622B7F718C000DF066 /* ContentView.swift */; };
 		658B76652B7F718E000DF066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 658B76642B7F718E000DF066 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		6548A6472B83C114006A68DA /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		6548A64F2B83C2FB006A68DA /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "Distral/DB/User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		6548A6502B83C2FB006A68DA /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "Distral/DB/User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		656FB8BD2B849C7200D2CF6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		656FB8BF2B849C8100D2CF6A /* Hand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		656FB8C12B849C9F00D2CF6A /* Education.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Education.swift; sourceTree = "<group>"; };
 		658B765D2B7F718C000DF066 /* Distral.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Distral.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		658B76602B7F718C000DF066 /* DistralApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistralApp.swift; sourceTree = "<group>"; };
 		658B76622B7F718C000DF066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -262,6 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				658B76A62B835252000DF066 /* TestNavigation.swift */,
+				656FB8BD2B849C7200D2CF6A /* Sex.swift */,
+				656FB8BF2B849C8100D2CF6A /* Hand.swift */,
+				656FB8C12B849C9F00D2CF6A /* Education.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -422,6 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				658B766A2B7F718E000DF066 /* Persistence.swift in Sources */,
+				656FB8C22B849C9F00D2CF6A /* Education.swift in Sources */,
 				658B76632B7F718C000DF066 /* ContentView.swift in Sources */,
 				658B76612B7F718C000DF066 /* DistralApp.swift in Sources */,
 				658B76942B7F81DA000DF066 /* HomeView.swift in Sources */,
@@ -435,6 +445,8 @@
 				658B76A32B835145000DF066 /* TutorialDetailView.swift in Sources */,
 				658B76B32B83899F000DF066 /* PDQ8ViewModel.swift in Sources */,
 				658B76A92B8356A7000DF066 /* VideoPlayerView.swift in Sources */,
+				656FB8C02B849C8100D2CF6A /* Hand.swift in Sources */,
+				656FB8BE2B849C7200D2CF6A /* Sex.swift in Sources */,
 				658B76B62B838E84000DF066 /* PDQView.swift in Sources */,
 				658B76912B7F80FC000DF066 /* TabsView.swift in Sources */,
 			);
