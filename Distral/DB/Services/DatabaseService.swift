@@ -14,7 +14,10 @@ class DatabaseService {
     init(context: NSManagedObjectContext) {
         self.managedObjectContext = context
     }
-    
+}
+
+extension DatabaseService {
+    // User DB Operations
     func addUser(id_gkv: String){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
         user.id_gkv = id_gkv
@@ -30,6 +33,21 @@ class DatabaseService {
         } catch {
             print("Error fetching Data: \(error)")
             return []
+        }
+    }
+    
+    func deleteUser(withIDGKV idGKV: String) {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id_gkv == %@", idGKV)
+        
+        do {
+            let users = try managedObjectContext.fetch(fetchRequest)
+            if let userToDelete = users.first {
+                managedObjectContext.delete(userToDelete)
+                saveContext()
+            }
+        } catch {
+            print("Fehler beim Löschen des Users: \(error)")
         }
     }
     
