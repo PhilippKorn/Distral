@@ -87,14 +87,6 @@ extension ProfileView {
         if let id_gkv = UserDefaults.standard.string(forKey: "userIdentification"),
            let user = databaseService.fetchUser(withIDGKV: id_gkv) {
             let fhirPatient = FHIRService.convertToPatient(user: user)
-            print(fhirPatient)
-            do {
-                let jsonData = try JSONEncoder().encode(fhirPatient)
-                let jsonString = String(data: jsonData, encoding: .utf8)
-                print(jsonString ?? "Ungültige Daten")
-            } catch {
-                print("Fehler bei der Konvertierung: \(error)")
-            }
         }
     }
 }
