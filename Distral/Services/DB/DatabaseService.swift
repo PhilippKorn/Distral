@@ -44,6 +44,19 @@ extension DatabaseService {
         }
     }
     
+    func fetchUser(withIDGKV idGKV: String) -> User? {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id_gkv == %@", idGKV)
+
+        do {
+            let result = try managedObjectContext.fetch(fetchRequest)
+            return result.first
+        } catch {
+            print("Fehler beim Überprüfen des Users \(error)")
+            return nil
+        }
+    }
+    
     func deleteUser(withIDGKV idGKV: String) {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id_gkv == %@", idGKV)
