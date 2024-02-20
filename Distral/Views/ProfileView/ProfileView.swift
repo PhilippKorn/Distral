@@ -14,22 +14,24 @@ struct ProfileView: View {
     var databaseService: DatabaseService
     
     var body: some View {
-        Form {
-            TextField("ID GKV", text: $id_gkv)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+        VStack {
+            Form {
+                TextField("ID GKV", text: $id_gkv)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+                
+                Button("Benutzer hinzufügen") {
+                    databaseService.addUser(id_gkv: id_gkv)
+                    users = databaseService.fetchUsers()
+                }
                 .padding()
-            
-            Button("Benutzer hinzufügen") {
-                databaseService.addUser(id_gkv: id_gkv)
-                users = databaseService.fetchUsers()
             }
-            .padding()
-        }
-        List {
-            ForEach(users, id: \.self) {user in
-                Text(user.id_gkv ?? "Unbekannt")
+            List {
+                ForEach(users, id: \.self) {user in
+                    Text(user.id_gkv ?? "Unbekannt")
+                }
+                .onDelete(perform: deleteUser)
             }
-            .onDelete(perform: deleteUser)
         }
     }
     

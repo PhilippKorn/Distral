@@ -21,7 +21,6 @@ extension DatabaseService {
     func addUser(id_gkv: String){
         let user = NSEntityDescription.insertNewObject(forEntityName: "User", into: managedObjectContext) as! User
         user.id_gkv = id_gkv
-        
         saveContext()
     }
    
